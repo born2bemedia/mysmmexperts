@@ -27,7 +27,7 @@ const reviews = [
 
 export const Reviews = () => {
   return (
-    <SectionLayout>
+    <SectionLayout id="reviews">
       <FadeIn className="flex flex-col gap-[76px] max-md:gap-[110px]">
         <Title as="h2">Відгуки клієнтів</Title>
         <section className="relative">

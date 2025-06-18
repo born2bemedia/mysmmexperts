@@ -1,5 +1,8 @@
 'use client';
 
+import { useState } from 'react';
+import dynamic from 'next/dynamic';
+
 import { useForm } from '@/shared/lib/forms';
 import { NextSymbol } from '@/shared/ui/components/next-symbol';
 import { Button } from '@/shared/ui/kit/button';
@@ -8,7 +11,16 @@ import { TextField } from '@/shared/ui/kit/text-field';
 
 import { contactSchema } from '../model/schema';
 
+const ThankYouDialog = dynamic(
+  () => import('./thanks-dialog').then(mod => mod.ThankYouDialog),
+  {
+    ssr: false,
+  },
+);
+
 export const ContactForm = () => {
+  const [isOpenDialog, setIsOpenDialog] = useState(false);
+
   const { Field, Subscribe, handleSubmit, reset } = useForm({
     defaultValues: {
       fullName: '',
@@ -20,8 +32,9 @@ export const ContactForm = () => {
       onChange: contactSchema,
     },
     onSubmit: async ({ value }) => {
-      console.log(value);
+      console.info(value);
       reset();
+      setIsOpenDialog(true);
     },
   });
 
@@ -61,21 +74,16 @@ export const ContactForm = () => {
             )}
           </Field>
           <Field name="email">
-            {({ name, state, handleBlur, handleChange }) => {
-              console.log(state.meta.errors);
-              return (
-                <TextField
-                  name={name}
-                  placeholder="Enter Your Name"
-                  value={String(state.value)}
-                  onBlur={handleBlur}
-                  onChange={e => handleChange(e.target.value)}
-                  hint={state.meta.errors
-                    .map(error => error?.message)
-                    .join(', ')}
-                />
-              );
-            }}
+            {({ name, state, handleBlur, handleChange }) => (
+              <TextField
+                name={name}
+                placeholder="Enter Your Name"
+                value={String(state.value)}
+                onBlur={handleBlur}
+                onChange={e => handleChange(e.target.value)}
+                hint={state.meta.errors.map(error => error?.message).join(', ')}
+              />
+            )}
           </Field>
         </section>
         <Field name="message">
@@ -98,6 +106,7 @@ export const ContactForm = () => {
           </Button>
         )}
       </Subscribe>
+      <ThankYouDialog isOpen={isOpenDialog} setIsOpen={setIsOpenDialog} />
     </form>
   );
 };

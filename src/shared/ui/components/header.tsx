@@ -12,10 +12,10 @@ export const Header = () => {
         <Image src="/full-logo.svg" alt="logo" width={130} height={28} />
       </Link>
       <section className="flex items-center gap-16 max-md:hidden">
-        <Link href="#">Наші послуги</Link>
-        <Link href="#">Про нас</Link>
-        <Link href="#">Як ми працюємо</Link>
-        <Link href="#">Контакти</Link>
+        <Link href="#services">Наші послуги</Link>
+        <Link href="#about-us">Про нас</Link>
+        <Link href="#how-we-work">Як ми працюємо</Link>
+        <Link href="#contact-us">Контакти</Link>
       </section>
       <BurgerMenu />
     </header>

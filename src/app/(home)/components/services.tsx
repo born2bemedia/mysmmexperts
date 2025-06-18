@@ -36,7 +36,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <SectionLayout>
+    <SectionLayout id="services">
       <FadeIn className="flex flex-col gap-10">
         <Title as="h2">Наші послуги</Title>
         <section className="grid grid-cols-3 gap-9 max-lg:grid-cols-1">
