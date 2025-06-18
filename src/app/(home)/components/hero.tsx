@@ -4,8 +4,7 @@ import Link from 'next/link';
 
 import { FadeIn } from '@/shared/ui/components/fade-in';
 import { InstUrl } from '@/shared/ui/components/inst-url';
-import { NextSymbol } from '@/shared/ui/components/next-symbol';
-import { Button } from '@/shared/ui/kit/button';
+import { OrderBtn } from '@/shared/ui/components/order-btn';
 import { Chip } from '@/shared/ui/kit/chip';
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
@@ -26,10 +25,7 @@ export const Hero = () => {
             яка веде до стабільного прибутку.
           </Text>
         </section>
-        <Button>
-          <NextSymbol />
-          Замовити послугу
-        </Button>
+        <OrderBtn />
       </FadeIn>
       <FadeIn
         duration={1}

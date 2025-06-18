@@ -12,7 +12,7 @@ import st from './how-we-work.module.scss';
 
 export const HowWeWork = () => {
   return (
-    <div className={st.layout}>
+    <div id="how-we-work" className={st.layout}>
       <Title as="h2">Як ми працюємо</Title>
       <section className={st.lineLayout}>
         <div className={st.card}>

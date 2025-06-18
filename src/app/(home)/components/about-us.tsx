@@ -9,7 +9,7 @@ import { Title } from '@/shared/ui/kit/title';
 
 export const AboutUs = () => {
   return (
-    <SectionLayout>
+    <SectionLayout id="about-us">
       <FadeIn className="flex items-center gap-[30px] max-md:flex-col max-md:gap-5">
         <section className="flex w-1/2 flex-col gap-4 max-md:w-full">
           <Title as="h2">Про нас</Title>

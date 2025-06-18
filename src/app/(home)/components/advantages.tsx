@@ -48,7 +48,7 @@ const items = [
 
 export const Advantages = () => {
   return (
-    <SectionLayout>
+    <SectionLayout id="advantages">
       <FadeIn className="flex flex-col gap-[66px]">
         <Title as="h2">Переваги</Title>
         <section className="grid grid-cols-3 gap-x-[26px] gap-y-[52px] max-lg:grid-cols-1">
