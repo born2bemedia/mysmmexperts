@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 
+import { FadeIn } from '@/shared/ui/components/fade-in';
 import { SectionLayout } from '@/shared/ui/components/section-layout';
 import { Divider } from '@/shared/ui/kit/divider';
 import { Text } from '@/shared/ui/kit/text';
@@ -26,16 +27,18 @@ const reviews = [
 
 export const Reviews = () => {
   return (
-    <SectionLayout className="flex flex-col gap-[76px] max-md:gap-[110px]">
-      <Title as="h2">Відгуки клієнтів</Title>
-      <section className="relative">
-        <section className="absolute -top-[30px] z-20 flex w-full gap-[30px] max-md:-top-[90px] max-md:flex-col">
-          {reviews.map(item => (
-            <ReviewCard key={item.name} {...item} />
-          ))}
+    <SectionLayout>
+      <FadeIn className="flex flex-col gap-[76px] max-md:gap-[110px]">
+        <Title as="h2">Відгуки клієнтів</Title>
+        <section className="relative">
+          <section className="absolute -top-[30px] z-20 flex w-full gap-[30px] max-md:-top-[90px] max-md:flex-col">
+            {reviews.map(item => (
+              <ReviewCard key={item.name} {...item} />
+            ))}
+          </section>
+          <div className="h-[194px] w-full rounded-4xl bg-black blur-[2px] max-md:h-[445px]" />
         </section>
-        <div className="h-[194px] w-full rounded-4xl bg-black blur-[2px] max-md:h-[445px]" />
-      </section>
+      </FadeIn>
     </SectionLayout>
   );
 };

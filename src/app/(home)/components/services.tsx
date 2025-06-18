@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 
+import { FadeIn } from '@/shared/ui/components/fade-in';
 import { SectionLayout } from '@/shared/ui/components/section-layout';
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
@@ -35,13 +36,15 @@ const services = [
 
 export const Services = () => {
   return (
-    <SectionLayout className="flex flex-col gap-10">
-      <Title as="h2">Наші послуги</Title>
-      <section className="grid grid-cols-3 gap-9 max-lg:grid-cols-1">
-        {services.map(item => (
-          <Card key={item.title} {...item} />
-        ))}
-      </section>
+    <SectionLayout>
+      <FadeIn className="flex flex-col gap-10">
+        <Title as="h2">Наші послуги</Title>
+        <section className="grid grid-cols-3 gap-9 max-lg:grid-cols-1">
+          {services.map(item => (
+            <Card key={item.title} {...item} />
+          ))}
+        </section>
+      </FadeIn>
     </SectionLayout>
   );
 };

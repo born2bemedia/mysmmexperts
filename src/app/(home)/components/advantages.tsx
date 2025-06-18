@@ -2,6 +2,7 @@
 
 import type { JSX } from 'react';
 
+import { FadeIn } from '@/shared/ui/components/fade-in';
 import { SectionLayout } from '@/shared/ui/components/section-layout';
 import { AnalyticsIcon } from '@/shared/ui/icons/analytics';
 import { CaseIcon } from '@/shared/ui/icons/case';
@@ -47,13 +48,15 @@ const items = [
 
 export const Advantages = () => {
   return (
-    <SectionLayout className="flex flex-col gap-[66px]">
-      <Title as="h2">Переваги</Title>
-      <section className="grid grid-cols-3 gap-x-[26px] gap-y-[52px] max-lg:grid-cols-1">
-        {items.map(item => (
-          <Card key={item.title} {...item} />
-        ))}
-      </section>
+    <SectionLayout>
+      <FadeIn className="flex flex-col gap-[66px]">
+        <Title as="h2">Переваги</Title>
+        <section className="grid grid-cols-3 gap-x-[26px] gap-y-[52px] max-lg:grid-cols-1">
+          {items.map(item => (
+            <Card key={item.title} {...item} />
+          ))}
+        </section>
+      </FadeIn>
     </SectionLayout>
   );
 };
