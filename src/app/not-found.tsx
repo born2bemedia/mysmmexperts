@@ -1,7 +1,16 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
+
+export const metadata: Metadata = {
+  title: 'Сторінку не знайдено - 404',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (
