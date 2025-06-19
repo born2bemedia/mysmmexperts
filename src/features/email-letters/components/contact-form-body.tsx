@@ -5,7 +5,7 @@ export const contactFormBody = ({ username }: { username: string }) => {
     body: `
       <div class="wrapper">
         <header class="header">
-          <img style="width: 672px; height: 137px" src="https://i.ibb.co/7tpsZ6g3/70892947374.png" alt="full-logo" class="logo" />
+          <img style="width: 696px; height: 142px" src="https://images2.imgbox.com/ea/1f/kMVI4fAe_o.png" alt="full-logo" class="logo" />
         </header>
         <div class="main">
           <p style="font-size: 30px; color: #323232;">Дякуємо за звернення!</p>
@@ -16,7 +16,7 @@ export const contactFormBody = ({ username }: { username: string }) => {
           <p class="text">З повагою, служба підтримки клієнтів</p>
         </div>
         <footer style="margin-top: 12px;">
-          <img style="width: 672px; height: 87px" src="https://i.ibb.co/JRKMtC4c/bg-1.png" alt="full-logo" class="logoSm" />
+          <img style="width: 696px; height: 90px" src="https://images2.imgbox.com/92/38/sk18zlow_o.png" alt="full-logo" class="logoSm" />
         </footer>
       </div>
     `,

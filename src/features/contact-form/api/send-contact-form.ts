@@ -61,7 +61,10 @@ export async function sendContactForm({
     const userBody = makeEmailBody({
       to: email,
       from: EMAIL_USER,
-      subject: 'Дякуємо за звернення!',
+      subject:
+        '=?utf-8?B?' +
+        Buffer.from('Дякуємо за звернення!').toString('base64') +
+        '?=',
       message: contactFormBody({ username: fullName }),
     });
 
