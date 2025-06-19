@@ -37,7 +37,7 @@ export const Hero = () => {
         </Link>
         <InstUrl />
       </FadeIn>
-      <div className="absolute top-[-100%] right-[-50%] z-0 h-[976px] w-[976px] rounded-[976px] bg-[#FF75C7] blur-[350px]" />
+      <div className="absolute top-[-100%] right-[-50%] z-0 h-[976px] w-[976px] rounded-[976px] bg-[#FF75C7] blur-[350px] max-md:right-[100%]" />
       <div className="bg-primary absolute bottom-[-160%] left-[-20%] z-0 h-[1080px] w-[1056px] rounded-[1080px] blur-[350px]" />
       <div className="absolute top-[-150%] left-[-70%] z-0 h-[976px] w-[976px] rounded-[976px] bg-[#FF9019] blur-[350px]" />
     </section>
