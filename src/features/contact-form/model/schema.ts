@@ -14,3 +14,5 @@ export const contactSchema = v.object({
   ),
   message: v.pipe(v.string()),
 });
+
+export type ContactSchema = v.InferOutput<typeof contactSchema>;

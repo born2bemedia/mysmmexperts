@@ -9,6 +9,7 @@ import { Button } from '@/shared/ui/kit/button';
 import { TextArea } from '@/shared/ui/kit/text-area';
 import { TextField } from '@/shared/ui/kit/text-field';
 
+import { sendContactForm } from '../api/send-contact-form';
 import { contactSchema } from '../model/schema';
 
 const ThankYouDialog = dynamic(
@@ -32,9 +33,14 @@ export const ContactForm = () => {
       onChange: contactSchema,
     },
     onSubmit: async ({ value }) => {
-      console.info(value);
-      reset();
-      setIsOpenDialog(true);
+      const { status } = await sendContactForm(value);
+
+      if (status === 'OK') {
+        reset();
+        setIsOpenDialog(true);
+      } else {
+        console.error(status);
+      }
     },
   });
 
@@ -53,7 +59,7 @@ export const ContactForm = () => {
             {({ name, state, handleBlur, handleChange }) => (
               <TextField
                 name={name}
-                placeholder="Enter Your Name"
+                placeholder="Ім’я*"
                 value={String(state.value)}
                 onBlur={handleBlur}
                 onChange={e => handleChange(e.target.value)}
@@ -65,7 +71,7 @@ export const ContactForm = () => {
             {({ name, state, handleBlur, handleChange }) => (
               <TextField
                 name={name}
-                placeholder="Enter Your Name"
+                placeholder="Телефон*"
                 value={String(state.value)}
                 onBlur={handleBlur}
                 onChange={e => handleChange(e.target.value)}
@@ -77,7 +83,7 @@ export const ContactForm = () => {
             {({ name, state, handleBlur, handleChange }) => (
               <TextField
                 name={name}
-                placeholder="Enter Your Name"
+                placeholder="Емайл*"
                 value={String(state.value)}
                 onBlur={handleBlur}
                 onChange={e => handleChange(e.target.value)}
@@ -90,7 +96,7 @@ export const ContactForm = () => {
           {({ name, state, handleBlur, handleChange }) => (
             <TextArea
               name={name}
-              placeholder="Message"
+              placeholder="Ваше питання або побажання"
               value={String(state.value)}
               onBlur={handleBlur}
               onChange={e => handleChange(e.target.value)}
