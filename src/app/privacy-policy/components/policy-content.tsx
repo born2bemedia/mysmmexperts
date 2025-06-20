@@ -14,8 +14,8 @@ export const PolicyContent = () => {
         через контактну форму для обробки запитів клієнтів. Дані не передаються
         третім особам без вашої згоди. Ви маєте право на виправлення або
         видалення інформації, звернувшись за адресою:{' '}
-        <Link className="text-[#6F6FF9]" href="mailto:gykovaon@gmail.com">
-          gykovaon@gmail.com
+        <Link className="text-[#6F6FF9]" href="mailto:contact@mysmmexperts.com">
+          contact@mysmmexperts.com
         </Link>
         .
       </Text>
