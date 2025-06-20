@@ -44,7 +44,11 @@ export async function sendContactForm({
       to: EMAIL_USER,
       from: EMAIL_USER,
       subject:
-        "Нове повідомлення з форми зворотнього зв'язку | mysmmexperts.com",
+        '=?utf-8?B?' +
+        Buffer.from(
+          "Нове повідомлення з форми зворотнього зв'язку | mysmmexperts.com",
+        ).toString('base64') +
+        '?=',
       message: `<p><b>Ім'я:</b> ${fullName}</p>
        <p><b>Email:</b> ${email}</p>
        <p><b>Телефон:</b> ${phone}</p>
