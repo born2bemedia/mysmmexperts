@@ -23,9 +23,12 @@ export const Footer = () => {
           Працюємо онлайн по всій Україні
         </Title>
         <section className="flex flex-col gap-3">
-          <Link href="mailto:gykovaon@gmail.com" className="flex flex-col">
+          <Link
+            href="mailto:contact@mysmmexperts.com"
+            className="flex flex-col"
+          >
             <Text weight={600}>Email</Text>
-            <Text>gykovaon@gmail.com</Text>
+            <Text>contact@mysmmexperts.com</Text>
           </Link>
           <Link href="tel:+380976930563" className="flex flex-col">
             <Text weight={600}>Телефон</Text>
