@@ -38,9 +38,9 @@ export const Footer = () => {
       </section>
       <Title
         size="7xl"
-        className="text-center text-[140px] leading-[120%] tracking-[18.2px] max-md:text-left max-md:text-[64px] max-md:tracking-tight"
+        className="text-center text-[110px] leading-[120%] tracking-[14.3px] max-md:text-left max-md:text-[64px] max-md:tracking-tight"
       >
-        SMM expert
+        My SMM expert
       </Title>
       <section className="flex items-center justify-between max-md:flex-col max-md:items-start max-md:gap-6">
         <InstUrl />
