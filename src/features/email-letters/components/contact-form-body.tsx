@@ -11,7 +11,7 @@ export const contactFormBody = ({ username }: { username: string }) => {
           <p style="font-size: 30px; color: #323232;">Дякуємо за звернення!</p>
           <p class="text">Доброго дня, ${username}</p>
           <p class="text">Дякуємо за звернення. Ми вже працюємо над вашим запитом і незабаром з вами зв'яжемося.</p>
-          <p class="text">Якщо виникли питання, пишіть на gykovaon@gmail.com або телефонуйте: +380976930563.</p>
+          <p class="text">Якщо виникли питання, пишіть на contact@mysmmexperts.com або телефонуйте: +380976930563.</p>
           <p class="text">Гарного дня!</p>
           <p class="text">З повагою, служба підтримки клієнтів</p>
         </div>
