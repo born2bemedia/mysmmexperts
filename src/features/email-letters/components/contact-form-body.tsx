@@ -16,7 +16,7 @@ export const contactFormBody = ({ username }: { username: string }) => {
           <p class="text">З повагою, служба підтримки клієнтів</p>
         </div>
         <footer style="margin-top: 12px;">
-          <img style="width: 696px; height: 90px" src="https://images2.imgbox.com/92/38/sk18zlow_o.png" alt="full-logo" class="logoSm" />
+          <img style="width: 696px; height: 90px" src="https://images2.imgbox.com/b6/3a/6PMhc8Ay_o.png" alt="full-logo" class="logoSm" />
         </footer>
       </div>
     `,
