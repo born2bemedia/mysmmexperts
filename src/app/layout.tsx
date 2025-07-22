@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import localFont from 'next/font/local';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 import { cn } from '@/shared/lib/utils/styles';
 import { Footer } from '@/shared/ui/components/footer';
@@ -34,6 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <GoogleTagManager gtmId="G-FGJ11NC5J4" />
+      </head>
       <body className={cn(helvetica.className, 'antialiased')}>
         <Header />
         {children}
